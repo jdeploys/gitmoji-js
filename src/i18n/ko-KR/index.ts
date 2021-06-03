@@ -1,18 +1,33 @@
 // This is just an example,
 // so you can safely delete all default props below
 
+import { GitmojiCategory } from 'src/data/gitmojiData';
+
 export default {
   failed: '실패',
   success: '성공',
+  filter: '분류',
+  category: {
+    all: '모두',
+    [GitmojiCategory.Code]: '코드 및 내부 변경',
+    [GitmojiCategory.Style]: '보이는 내용 변경',
+    [GitmojiCategory.Deploy]: '배포',
+    [GitmojiCategory.Configuration]: '환경설정',
+    [GitmojiCategory.Document]: '문서',
+    [GitmojiCategory.Dependency]: '종속성(Dependency)',
+    [GitmojiCategory.WorkOrIssue]: '일반적인 작업 또는 이슈',
+    [GitmojiCategory.Etc]: '기타',
+  },
   desc: {
-    art: 'UI / 스타일 추가 / 수정',
+    art: '코드 포맷, 구조 향상',
     zap: '성능 향상',
     fire: '코드 / 파일 삭제',
+    bug: '버그 수정',
     ambulance: '핫픽스',
     sparkles: '새 기능',
     memo: '문서 변경',
     rocket: '배포(됨)',
-    lipstick: 'UI / 스타이 추가 / 수정',
+    lipstick: 'UI, 스타일 추가 / 수정',
     tada: '프로젝트 시작',
     white_check_mark: '테스트 추가 / 수정',
     lock: '보안 작업',

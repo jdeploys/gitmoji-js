@@ -1,6 +1,6 @@
 import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
 
-@Module
+@Module({ name: 'ui' })
 export default class UIModule extends VuexModule {
   count = 0;
 

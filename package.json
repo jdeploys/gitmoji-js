@@ -12,8 +12,10 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "axios": "^0.21.1",
+    "clipboard": "^2.0.8",
     "core-js": "^3.6.5",
     "quasar": "^2.0.0-beta.1",
+    "ts-enum-util": "^4.0.2",
     "vue-i18n": "^9.0.0-beta.0"
   },
   "devDependencies": {

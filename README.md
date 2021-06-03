@@ -2,6 +2,13 @@
 
 gitmoji by js
 
+### todo
+
+[ ] SEO
+[ ] 다중 언어팩
+[ ] github 링크
+[ ] 주석 및 소스코드 정리
+
 ## Install the dependencies
 ```bash
 yarn
