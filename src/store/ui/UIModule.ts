@@ -1,26 +1,26 @@
-import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
+import {
+  Module,
+  VuexModule,
+  Mutation,
+  Action,
+  getModule,
+} from 'vuex-module-decorators';
+import { storeInstance } from 'src/store';
+import { Category } from 'components/types';
 
-@Module({ name: 'ui' })
+@Module({ namespaced: true, name: 'ui', store: storeInstance, dynamic: true })
 export default class UIModule extends VuexModule {
-  count = 0;
+  filter: Category | null = null;
 
   @Mutation
-  increment(delta: number) {
-    this.count += delta;
-  }
-  @Mutation
-  decrement(delta: number) {
-    this.count -= delta;
+  private setFilter(data: Category) {
+    this.filter = data;
   }
 
-  // action 'incr' commits mutation 'increment' when done with return value as payload
-  @Action({ commit: 'increment' })
-  incr() {
-    return 5;
-  }
-  // action 'decr' commits mutation 'decrement' when done with return value as payload
-  @Action({ commit: 'decrement' })
-  decr() {
-    return 5;
+  @Action({ commit: 'setFilter' })
+  updateFilter(data: Category) {
+    return data;
   }
 }
+
+export const uiStore = getModule(UIModule);

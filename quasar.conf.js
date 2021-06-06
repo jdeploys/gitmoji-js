@@ -85,8 +85,8 @@ module.exports = configure(function (ctx) {
     framework: {
       config: {
         notify: {
-          position: 'top'
-        }
+          position: 'top',
+        },
       },
 
       // iconSet: 'material-icons', // Quasar icon set
@@ -100,7 +100,7 @@ module.exports = configure(function (ctx) {
       // directives: [],
 
       // Quasar plugins
-      plugins: ['Notify'],
+      plugins: ['Notify', 'Meta'],
     },
 
     // animations: 'all', // --- includes all animations
@@ -144,7 +144,7 @@ module.exports = configure(function (ctx) {
       manifest: {
         name: 'gitmoji-js',
         short_name: 'gitmoji-js',
-        description: 'gitmoji by js',
+        description: '깃모지(gitmoji)를 분류해서 정리한 사이트입니다.',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',

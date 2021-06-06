@@ -1,12 +1,7 @@
 <template>
   <q-page class="q-pa-md">
     <div class="q-mb-lg">
-      <q-select
-        outlined
-        v-model="filter"
-        :options="filterOptions"
-        :label="$t('filter')"
-      />
+      <filter-select></filter-select>
     </div>
     <div class="row q-col-gutter-md">
       <q-intersection
@@ -23,49 +18,22 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue';
-import {
-  GitmojiCategory,
-  gitmojiData,
-} from 'src/data/gitmojiData';
+import { computed, defineComponent } from 'vue';
+import { gitmojiData } from 'src/data/gitmojiData';
 import EmojiCard from 'components/EmojiCard.vue';
-import { $enum } from 'ts-enum-util';
-import { useI18n } from 'vue-i18n';
-
-interface Category {
-  label: string;
-  value: string;
-  enumKey: string;
-}
-
-const allValue = 'all';
+import { CATEGORY_ALL } from 'components/types';
+import FilterSelect from 'components/FilterSelect.vue';
+import { uiStore } from 'src/store/ui/UIModule';
 
 export default defineComponent({
   name: 'PageIndex',
-  components: { EmojiCard },
+  components: { FilterSelect, EmojiCard },
   setup() {
-    const { t } = useI18n();
-    const allOption = {
-      label: t(`category.${allValue}`),
-      value: allValue,
-      enumKey: '',
-    };
-    const filter = ref<Category>(allOption);
-
-    let categoryList: Category[] = [allOption];
-
-    for (const [key, value] of $enum(GitmojiCategory).entries()) {
-      categoryList = [
-        ...categoryList,
-        { label: t(`category.${key}`), value: key, enumKey: value },
-      ];
-    }
-
-    const filterOptions = ref(categoryList);
+    const filter = computed(() => uiStore.filter);
 
     const filteredList = computed(() => {
       const filterRef = filter.value;
-      if (filterRef.value === allValue) {
+      if (!filterRef || filterRef.value === CATEGORY_ALL) {
         return gitmojiData;
       }
       return gitmojiData.filter((row) => row.category === filterRef.value);
@@ -73,8 +41,6 @@ export default defineComponent({
 
     return {
       list: filteredList,
-      filter,
-      filterOptions,
     };
   },
 });

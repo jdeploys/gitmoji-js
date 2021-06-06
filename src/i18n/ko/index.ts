@@ -7,6 +7,9 @@ export default {
   failed: '실패',
   success: '성공',
   filter: '분류',
+  'gitmoji': '깃모지(gitmoji)',
+  'click to copy': '누르면 복사됩니다!',
+  'select language': '언어',
   category: {
     all: '모두',
     [GitmojiCategory.Code]: '코드 및 내부 변경',
@@ -47,7 +50,7 @@ export default {
     hammer: '개발 스크립트 추가 / 수정',
     globe_with_meridians: '국제화 및 로컬화',
     pencil2: '오타 수정',
-    poop: '개선해야되는 안좋은 코드가 작성됨',
+    poop: '개선해야되는 좋지 않은 코드가 작성됨',
     rewind: '이전으로 되돌림',
     twisted_rightwards_arrows: '브런치 병합됨',
     package: '컴파일된 패키지나 파일이 수정 / 추가됨',

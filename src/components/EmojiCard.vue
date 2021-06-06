@@ -8,7 +8,10 @@
       >
         {{ gitmoji.emoji }}
       </div>
-      <q-tooltip>Click to Copy!</q-tooltip>
+      <div class='text-center text-grey-6'>:{{ gitmoji.key }}:</div>
+      <q-tooltip class="bg-peach-crayola" anchor="top middle">
+        {{ $t('click to copy') }}
+      </q-tooltip>
     </q-card-section>
     <q-separator inset />
     <q-card-section>

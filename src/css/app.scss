@@ -1,7 +1,15 @@
+@import 'color';
+
 // app global css in SCSS form
 @font-face {
   font-family: 'Binggrae';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff') format('woff');
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff')
+    format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+body {
+  font-family: 'Binggrae', 'Roboto', '-apple-system', 'Helvetica Neue',
+    Helvetica, Arial, sans-serif;
 }

@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "description": "gitmoji by js",
   "productName": "gitmoji-js",
-  "author": "juseong.kim <dcjuja@gmail.com>",
+  "author": "jdeploys <dcjuja@gmail.com>",
+  "repository": "https://github.com/jdeploys/gitmoji-js",
   "private": true,
   "scripts": {
+    "start": "quasar dev",
     "lint": "eslint --ext .js,.ts,.vue ./",
     "test": "echo \"No test specified\" && exit 0"
   },

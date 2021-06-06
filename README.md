@@ -1,33 +1,25 @@
-# gitmoji-js (gitmoji-js)
+# gitmoji by js
 
-gitmoji by js
+## About
 
-### todo
+[gitmoji](https://github.com/carloscuesta/gitmoji) 프로젝트를 한글화하고,
+기존에 emoji가 찾아보기 힘든 점을 감안해 
+실제 사용 시 필요한 분류로 분리하여 
+보기 좋게 나누기 위해 작성된 프로젝트입니다.
 
-[ ] SEO
-[ ] 다중 언어팩
-[ ] github 링크
-[ ] 주석 및 소스코드 정리
+## 접속 주소
 
-## Install the dependencies
-```bash
-yarn
-```
+TODO: 접속 주소
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
+## License
 
-### Lint the files
-```bash
-yarn run lint
-```
+The code is available under the MIT license.
+이 프로젝트는 MIT 라이선스 입니다.
 
-### Build the app for production
-```bash
-quasar build
-```
 
-### Customize the configuration
-See [Configuring quasar.conf.js](https://v2.quasar.dev/quasar-cli/quasar-conf-js).
+## Todo
+
+- [ ] github 링크
+- [ ] 주석 및 소스코드 정리
+- [x] readme
+- [ ] how to 

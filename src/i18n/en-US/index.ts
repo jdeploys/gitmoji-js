@@ -1,9 +1,26 @@
 // This is just an example,
 // so you can safely delete all default props below
 
+import { GitmojiCategory } from 'src/data/gitmojiData';
+
 export default {
   failed: 'Action failed',
   success: 'Action was successful',
+  filter: 'Category',
+  'gitmoji': 'gitmoji',
+  'click to copy': 'Click to COPY!',
+  'select language': 'Language',
+  category: {
+    all: 'All',
+    [GitmojiCategory.Code]: 'Code or Internal Change',
+    [GitmojiCategory.Style]: 'Change what you see',
+    [GitmojiCategory.Deploy]: 'Deploy',
+    [GitmojiCategory.Configuration]: 'Configuration',
+    [GitmojiCategory.Document]: 'Documentation',
+    [GitmojiCategory.Dependency]: 'Dependency',
+    [GitmojiCategory.WorkOrIssue]: 'Work or Issue',
+    [GitmojiCategory.Etc]: 'Etc',
+  },
   desc: {
     art: 'Improve structure / format of the code.',
     zap: 'Improve performance.',

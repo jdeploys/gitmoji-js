@@ -58,6 +58,33 @@ $champagne-pink: rgba(255, 229, 217, 1);
 $peach-puff: rgba(255, 215, 186, 1);
 $peach-crayola: rgba(254, 200, 154, 1);
 
+.bg- {
+  &melon {
+    background-color: $melon;
+  }
+  &pale-pink {
+    background-color: $pale-pink;
+  }
+  &misty-rose {
+    background-color: $misty-rose;
+  }
+  &alabaster {
+    background-color: $alabaster;
+  }
+  &platinum {
+    background-color: $platinum;
+  }
+  &linen {
+    background-color: $linen;
+  }
+  &peach-crayola {
+    background-color: $peach-crayola;
+  }
+  &peach-puff {
+    background-color: $peach-puff;
+  }
+}
+
 /* SCSS Gradient */
 $gradient-top: linear-gradient(
   0deg,

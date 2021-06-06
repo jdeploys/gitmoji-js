@@ -6,9 +6,6 @@ import {
   useStore as vuexUseStore,
 } from 'vuex';
 
-import uiModule from './ui/UIModule';
-import { getModule } from 'vuex-module-decorators';
-
 export interface StateInterface {
   // Define your own store structure, using submodules if needed
   // example: ExampleStateInterface;
@@ -23,23 +20,21 @@ declare module '@vue/runtime-core' {
   }
 }
 
+export let storeInstance: VuexStore<unknown>;
+
 // provide typings for `useStore` helper
 export const storeKey: InjectionKey<VuexStore<StateInterface>> =
   Symbol('vuex-key');
 
 export default store(function (/* { ssrContext } */) {
   const setupStore = createStore<StateInterface>({
-    modules: {
-      ui: uiModule,
-    },
+    modules: {},
 
     // enable strict mode (adds overhead!)
     // for dev mode and --debug builds only
     strict: !!process.env.DEBUGGING,
   });
-
-  // 모듈 연결
-  getModule(uiModule, setupStore);
+  storeInstance = setupStore;
   return setupStore;
 });
 

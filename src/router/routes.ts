@@ -11,7 +11,8 @@ const routes: RouteRecordRaw[] = [
   // but you can also remove it
   {
     path: '/:catchAll(.*)*',
-    component: () => import('pages/Error404.vue'),
+    // 필요한 경우 여기에 404 페이지 작성
+    component: () => import('layouts/MainLayout.vue'),
   },
 ];
 
