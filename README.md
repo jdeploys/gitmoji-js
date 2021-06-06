@@ -7,9 +7,9 @@
 실제 사용 시 필요한 분류로 분리하여 
 보기 좋게 나누기 위해 작성된 프로젝트입니다.
 
-## 접속 주소
+## Site Address
 
-TODO: 접속 주소
+[https://gitmoji-js.netlify.app/](https://gitmoji-js.netlify.app/)
 
 ## License
 
