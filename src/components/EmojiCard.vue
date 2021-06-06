@@ -8,7 +8,9 @@
       >
         {{ gitmoji.emoji }}
       </div>
-      <div class='text-center text-grey-6'>:{{ gitmoji.key }}:</div>
+      <div class="emoji-card__emoji-text text-center text-grey-6">
+        :{{ gitmoji.key }}:
+      </div>
       <q-tooltip class="bg-peach-crayola" anchor="top middle">
         {{ $t('click to copy') }}
       </q-tooltip>
@@ -26,6 +28,7 @@ import { GitmojiData } from 'src/data/gitmojiData';
 import ClipboardJS from 'clipboard';
 import { useQuasar } from 'quasar';
 
+// 이모지 표시 카드
 export default defineComponent({
   name: 'EmojiCard',
   props: {
@@ -44,7 +47,9 @@ export default defineComponent({
       });
     };
 
-    onMounted(() => new ClipboardJS('.emoji-card__emoji'));
+    onMounted(() => {
+      new ClipboardJS('.emoji-card__emoji');
+    });
 
     return {
       onClickEmoji,
@@ -58,10 +63,16 @@ export default defineComponent({
   min-height: 180px;
   font-family: Binggrae;
   cursor: pointer;
-
   &__emoji {
     text-align: center;
     font-size: 3em;
+    &-text {
+      // chart_with_upwards_trend 글자가 카드 크기를 넘어가지 않도록 수정
+      font-size: 12px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      letter-spacing: -0.5px;
+    }
   }
   &__desc {
     font-size: 1em;

@@ -16,6 +16,7 @@ import { $enum } from 'ts-enum-util';
 import { GitmojiCategory } from 'src/data/gitmojiData';
 import { uiStore } from 'src/store/ui/UIModule';
 
+// 카테고리 필터 선택기
 export default defineComponent({
   name: 'FilterSelect',
   setup() {

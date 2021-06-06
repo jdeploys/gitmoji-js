@@ -26,9 +26,10 @@ const langItems = [
   },
 ];
 
+// 언어 선택기
 export default defineComponent({
   name: 'LangSelect',
-  setup(prop, { emit }) {
+  setup() {
     const { locale } = useI18n({ useScope: 'global' });
 
     return {

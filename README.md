@@ -20,7 +20,4 @@ The code is available under the MIT license.
 
 ## Todo
 
-- [ ] github 링크
-- [ ] 주석 및 소스코드 정리
-- [x] readme
-- [ ] how to 
+- [ ] how to 배너 작성

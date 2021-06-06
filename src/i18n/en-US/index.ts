@@ -10,6 +10,7 @@ export default {
   'gitmoji': 'gitmoji',
   'click to copy': 'Click to COPY!',
   'select language': 'Language',
+  'expand': 'Expand',
   category: {
     all: 'All',
     [GitmojiCategory.Code]: 'Code or Internal Change',
