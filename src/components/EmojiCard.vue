@@ -44,7 +44,7 @@ export default defineComponent({
 
     const onClickEmoji = (gitmoji: GitmojiData) => {
       $q.notify({
-        type: 'info',
+        type: 'positive',
         message: `${t('clipboard copied!')} ${gitmoji.emoji}`,
       });
     };
