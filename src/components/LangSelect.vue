@@ -7,6 +7,7 @@
     emit-value
     map-options
     dense
+    dark
   >
   </q-select>
 </template>

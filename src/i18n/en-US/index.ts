@@ -9,8 +9,10 @@ export default {
   filter: 'Category',
   'gitmoji': 'gitmoji',
   'click to copy': 'Click to COPY!',
+  'clipboard copied!': 'Copied to clipboard!',
   'select language': 'Language',
   'expand': 'Expand',
+  'how to use?': 'How to use ?',
   category: {
     all: 'All',
     [GitmojiCategory.Code]: 'Code or Internal Change',

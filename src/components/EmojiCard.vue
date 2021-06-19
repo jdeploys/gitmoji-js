@@ -1,17 +1,17 @@
 <template>
   <q-card class="emoji-card" flat bordered>
-    <q-card-section>
-      <div
-        class="emoji-card__emoji"
-        :data-clipboard-text="gitmoji.emoji"
-        @click="onClickEmoji(gitmoji)"
-      >
+    <q-card-section
+      class="emoji-card-section"
+      :data-clipboard-text="gitmoji.emoji"
+      @click="onClickEmoji(gitmoji)"
+    >
+      <div class="emoji-card__emoji">
         {{ gitmoji.emoji }}
       </div>
       <div class="emoji-card__emoji-text text-center text-grey-6">
         :{{ gitmoji.key }}:
       </div>
-      <q-tooltip class="bg-peach-crayola" anchor="top middle">
+      <q-tooltip class="bg-dark" anchor="top middle">
         {{ $t('click to copy') }}
       </q-tooltip>
     </q-card-section>
@@ -27,6 +27,7 @@ import { defineComponent, PropType, onMounted } from 'vue';
 import { GitmojiData } from 'src/data/gitmojiData';
 import ClipboardJS from 'clipboard';
 import { useQuasar } from 'quasar';
+import { useI18n } from 'vue-i18n';
 
 // 이모지 표시 카드
 export default defineComponent({
@@ -39,16 +40,17 @@ export default defineComponent({
   },
   setup() {
     const $q = useQuasar();
+    const { t } = useI18n();
 
     const onClickEmoji = (gitmoji: GitmojiData) => {
       $q.notify({
-        type: 'positive',
-        message: `클립보드에 복사되었어요! ${gitmoji.emoji}`,
+        type: 'info',
+        message: `${t('clipboard copied!')} ${gitmoji.emoji}`,
       });
     };
 
     onMounted(() => {
-      new ClipboardJS('.emoji-card__emoji');
+      new ClipboardJS('.emoji-card-section');
     });
 
     return {

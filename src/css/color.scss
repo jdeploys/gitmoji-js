@@ -59,6 +59,9 @@ $peach-puff: rgba(255, 215, 186, 1);
 $peach-crayola: rgba(254, 200, 154, 1);
 
 .bg- {
+  &header {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
   &melon {
     background-color: $melon;
   }
