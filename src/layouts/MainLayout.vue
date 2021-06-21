@@ -5,13 +5,26 @@
         <q-toolbar-title>{{ $t('gitmoji') }} js</q-toolbar-title>
         <q-btn
           icon="help_outline"
-          :label="$t('how to use?')"
-          outline
+          :label="$q.screen.xs ? '' : $t('how to use?')"
+          rounded
+          dense
+          flat
           @click="isShowHowToModal = true"
         ></q-btn>
 
-        <lang-select class="q-mx-lg" style="width: 120px" />
-        <q-btn outline @click="onClickGithubLink">github</q-btn>
+        <lang-select
+          v-if="!$q.screen.xs"
+          class="q-mx-lg"
+          style="width: 120px"
+        />
+        <q-btn
+          icon="img:/assets/GitHub-Mark-Light-32px.png"
+          rounded
+          dense
+          flat
+          :label="$q.screen.xs ? '' : 'github'"
+          @click="onClickGithubLink"
+        ></q-btn>
       </q-toolbar>
     </q-header>
 
@@ -33,7 +46,10 @@
       </div>
     </footer>
     <q-dialog v-model="isShowHowToModal">
-      <div class="bg-white q-px-lg q-pb-md">
+      <div
+        class="q-px-lg q-pb-md"
+        :class="$q.dark.isActive ? 'bg-dark' : 'bg-white'"
+      >
         <how-to-use />
       </div>
     </q-dialog>
