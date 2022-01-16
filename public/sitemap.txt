@@ -1,1 +1,1 @@
-https://gitmoji-js.netlify.app/
+https://gitmoji-js.netlify.app
