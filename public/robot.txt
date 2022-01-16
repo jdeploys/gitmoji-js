@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gitmoji-js.netlify.app/sitmap.txt
