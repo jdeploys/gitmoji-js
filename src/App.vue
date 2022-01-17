@@ -16,11 +16,11 @@ export default defineComponent({
       meta: {
         description: {
           name: 'description',
-          content: '깃모지(gitmoji)를 분류해서 정리한 사이트입니다.',
+          content: '깃모지(gitmoji)를 한글로 분류해서 정리한 사이트입니다.',
         },
         keywords: {
           name: 'keywords',
-          content: 'gitmoji,깃모지,gitmoji 한글,gitmoji category,깃모지 분류',
+          content: 'gitmoji,깃모지,gitmoji 한글,gitmoji category,깃모지 분류,gitmoji kr,gitmoji korean,git emoji',
         },
         equiv: {
           'http-equiv': 'Content-Type',
